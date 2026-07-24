@@ -1,0 +1,97 @@
+.pay-page { min-height: calc(100vh - var(--nav-height)); background: var(--bg); display: flex; align-items: flex-start; justify-content: center; padding: 40px 20px 80px; }
+
+/* ── Grid ── */
+.pay-grid { display: grid; grid-template-columns: 340px 1fr; gap: 24px; width: 100%; max-width: 860px; align-items: start; }
+
+/* ── Summary panel ── */
+.pay-summary { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 28px 24px; }
+.pay-back { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); font-size: 0.82rem; text-decoration: none; margin-bottom: 20px; transition: color 0.2s; }
+.pay-back:hover { color: #fff; }
+.pay-summary h2 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 20px; letter-spacing: 0.02em; }
+.pay-summary-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.88rem; }
+.pay-summary-row span { color: rgba(255,255,255,0.6); }
+.pay-summary-row strong { color: #fff; }
+.pay-summary-row.total { border-bottom: none; padding-top: 16px; margin-top: 4px; }
+.pay-summary-row.total span { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+.pay-summary-row.total strong { font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); }
+.pay-secure-badge { display: flex; align-items: center; gap: 7px; font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 20px; }
+.pay-card-icons { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.pci-badge { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 0.68rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.04em; border: 1px solid rgba(255,255,255,0.15); }
+
+/* ── Form panel ── */
+.pay-form-box { background: var(--white); border-radius: var(--radius); padding: 28px 28px 24px; box-shadow: var(--shadow); border: 1px solid var(--secondary-light); }
+.pay-form-header { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1.5px solid var(--secondary-light); }
+.pay-form-header h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--dark); flex: 1; letter-spacing: 0.02em; }
+.pay-form-header svg { color: var(--success); }
+.pay-card-type { font-size: 0.7rem; font-weight: 800; padding: 3px 9px; border-radius: 5px; letter-spacing: 0.06em; }
+.pay-card-type.visa { background: #1a1f71; color: #fff; }
+.pay-card-type.mc   { background: #eb001b; color: #fff; }
+.pay-card-type.amex { background: #007bc1; color: #fff; }
+
+.pay-input-wrap { position: relative; }
+.pay-input-wrap input { padding-left: 38px; }
+.pay-input-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--grey); pointer-events: none; }
+
+.pay-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pay-section-label { font-size: 0.78rem; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: 0.08em; margin: 14px 0 10px; padding-top: 14px; border-top: 1px solid var(--secondary-light); }
+
+.pay-submit-btn { width: 100%; justify-content: center; padding: 14px; font-size: 1rem; margin-top: 16px; gap: 8px; background: var(--success); border-color: var(--success); }
+.pay-submit-btn:hover:not(:disabled) { background: #059669; border-color: #059669; }
+.pay-disclaimer { font-size: 0.72rem; color: var(--grey); text-align: center; margin-top: 12px; line-height: 1.6; }
+
+/* ── Processing ── */
+.pay-processing { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; text-align: center; }
+.pay-spinner { width: 52px; height: 52px; border: 4px solid var(--secondary-light); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 24px; }
+.pay-processing h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--dark); margin-bottom: 8px; }
+.pay-processing p { color: var(--grey); }
+
+/* ── Result cards ── */
+.pay-result-card { background: var(--white); border-radius: var(--radius); padding: 48px 36px; text-align: center; max-width: 500px; width: 100%; box-shadow: var(--shadow); border: 1px solid var(--secondary-light); }
+.pay-result-icon { margin-bottom: 20px; }
+.pay-result-icon.success svg { color: var(--success); }
+.pay-result-icon.error   svg { color: #EF4444; }
+.pay-result-card h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--dark); margin-bottom: 10px; }
+.pay-result-card p  { color: var(--grey); font-size: 0.92rem; margin-bottom: 12px; line-height: 1.7; }
+.pay-trans-id { background: var(--bg); border-radius: 10px; padding: 12px 16px; margin: 16px 0; text-align: left; }
+.pay-trans-id span { font-size: 0.72rem; color: var(--grey); display: block; margin-bottom: 4px; text-transform: uppercase; font-weight: 700; }
+.pay-trans-id code { font-size: 0.82rem; color: var(--primary); word-break: break-all; }
+.pay-note { font-size: 0.8rem !important; }
+.pay-result-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .pay-grid { grid-template-columns: 1fr; }
+  .pay-summary { order: 2; }
+  .pay-form-box { order: 1; }
+  .pay-row-2 { grid-template-columns: 1fr; }
+}
+
+/* ── Flex Microform field containers ── */
+.pay-flex-field {
+  border: 1.5px solid var(--secondary-light);
+  border-radius: 8px;
+  background: var(--white);
+  height: 46px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.pay-flex-field:focus-within { border-color: var(--primary); }
+.flex-loading { font-size: 0.8rem; color: var(--grey); }
+.flex-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #ecfdf5;
+  color: #10b981;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid #a7f3d0;
+}
+
+/* ── Flex field states ── */
+.pay-flex-field.flex-loaded { border-color: var(--primary); background: #f8faff; }
+.flex-status-badge { margin-top: 16px; font-size: 0.72rem; color: #10b981; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 8px 10px; line-height: 1.5; }
+.flex-field-error { font-size: 0.75rem; color: #ef4444; margin-top: 4px; }
+.pay-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }

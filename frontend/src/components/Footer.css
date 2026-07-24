@@ -1,0 +1,28 @@
+.footer { background: var(--dark); color: rgba(255,255,255,0.7); margin-top: 80px; }
+.footer-inner {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+  padding: 52px 60px 36px; max-width: 1200px; margin: 0 auto;
+}
+.footer-logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.05em; color: #fff; display: flex; align-items: center; gap: 9px; margin-bottom: 8px; }
+.footer-logo svg { color: var(--accent); }
+.footer-tagline { color: var(--accent); font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
+.footer-desc { font-size: 0.83rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 280px; }
+.footer-socials { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.social-icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); transition: all 0.2s; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); }
+.social-icon:hover { background: rgba(255,255,255,0.2); color: #fff; transform: translateY(-2px); }
+.social-wa:hover { background: #25D366; border-color: #25D366; }
+.social-fb:hover { background: #1877F2; border-color: #1877F2; }
+.social-ig:hover { background: #dc2743; border-color: #dc2743; }
+.social-tt:hover { background: #010101; border-color: #69C9D0; color: #69C9D0; }
+.footer-col h4 { color: #fff; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+.footer-col a, .footer-col .fi { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.55); font-size: 0.83rem; margin-bottom: 9px; text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover, .fi-link:hover { color: var(--accent); }
+.footer-bottom { text-align: center; padding: 18px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 36px 24px 24px; }
+  .footer-desc  { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px 20px; }
+}

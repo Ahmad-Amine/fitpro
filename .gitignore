@@ -1,0 +1,30 @@
+# Dependencies
+backend/node_modules/
+frontend/node_modules/
+
+# Secrets — NEVER push these
+backend/.env
+backend/.env.local
+backend/.env.production
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+backend/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
